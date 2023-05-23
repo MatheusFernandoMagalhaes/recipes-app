@@ -72,7 +72,7 @@ input::placeholder {
 
 }
 
-button {
+#login-btn {
   width: 75%;
   height: 40px;
   left: 42px;
