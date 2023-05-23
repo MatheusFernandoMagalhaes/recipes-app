@@ -5,6 +5,7 @@ import foodsIcon from '../images/foods.svg';
 import recipesApp from '../images/logo_Header_Recipes_app.svg';
 import icon from '../images/ícone_Recipes_app.svg';
 import '../Styles/Foods.css';
+import Footer from './Footer';
 
 function FoodsHeader() {
   return (
@@ -28,6 +29,7 @@ function FoodsHeader() {
           <button type="button" className="breakfast-btn" />
           <button type="button" className="desert-btn" />
         </div>
+        <Footer />
       </div>
     </header>
   );

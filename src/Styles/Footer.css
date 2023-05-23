@@ -1,0 +1,38 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 360px;
+  height: 52px;
+  left: 0px;
+  top: 740px;
+
+  background: #41197F;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.25);
+
+}
+
+.drinks-btn{
+  background-image: url(/src/images/icone_bebida.svg);
+  background-size: cover;
+  background-color: #41197F;
+  margin-left: 30px;
+  border: none;
+  width: 24.61px;
+  height: 25.12px;
+  top: 765.64px;
+
+}
+
+.foods-btn{
+  background-image: url(/src/images/icone_prato.svg);
+  background-size: cover;
+  background-color: #41197F;
+  margin-right: 30px;
+  border: none;
+  width: 40.33px;
+  height: 29.53px;
+  top: 764px;
+
+}
