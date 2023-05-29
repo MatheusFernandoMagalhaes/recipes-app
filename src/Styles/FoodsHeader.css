@@ -1,0 +1,132 @@
+.header-container{
+}
+
+.background-image{
+  position: absolute;
+}
+
+.icon{
+position: absolute;
+width: 42.6px;
+height: 39.28px;
+left: 26px;
+top: 6px;
+}
+
+.recipes-app{
+  position: absolute;
+  width: 109.13px;
+  height: 16.97px;
+  left: 89.37px;
+  top: 20.78px;
+}
+
+.search-btn {
+  background-image: url(/src/images/icone_pesquisar.svg);
+  background-size: cover;
+  background-color: #FCDC36;
+  border: none;
+  position: absolute;
+  width: 26.85px;
+  height: 26.85px;
+  left: 267px;
+  top: 14px;
+}
+
+.perfil-btn{
+  background-image: url(/src/images/icone_perfil.svg);
+  background-size: cover;
+  background-color: #FCDC36;
+  border: none;
+  position: absolute;
+  width: 26.85px;
+  height: 26.85px;
+  left: 310px;
+  top: 13px;
+}
+
+.meals {
+  position: absolute;
+  width: 147px;
+  height: 64px;
+  left: 107px;
+  top: 83px;
+}
+
+.categories {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 333.28px;
+  height: 59.71px;
+  left: 13px;
+  top: 171px;
+}
+
+.all-btn {
+  background-image: url(/src/images/All.svg);
+  background-size: cover;
+  background-color: #FFFFFF;
+  border: none;
+  width: 45.28px;
+  height: 59.71px;
+  left: 13px;
+  top: 171px;
+
+}
+
+.beef-btn{
+  background-image: url(/src/images/beef.svg);
+  background-size: cover;
+  background-color: #FFFFFF;
+  border: none;
+  width: 45.28px;
+  height: 59.71px;
+  left: 69px;
+  top: 171px;
+}
+
+.goat-btn{
+  background-image: url(/src/images/goat.svg);
+  background-size: cover;
+  background-color: #FFFFFF;
+  border: none;
+  width: 45.28px;
+  height: 59.71px;
+  left: 125px;
+  top: 171px;
+}
+
+.chicken-btn{
+  background-image: url(/src/images/chicken.svg);
+  background-size: cover;
+  background-color: #FFFFFF;
+  border: none;
+  width: 45.28px;
+  height: 59.71px;
+  left: 181px;
+  top: 171px;
+}
+
+.breakfast-btn{
+  background-image: url(/src/images/breakfast.svg);
+  background-size: cover;
+  background-color: #FFFFFF;
+  border: none;
+  width: 53.43px;
+  height: 59.71px;
+  left: 237px;
+  top: 171px;
+
+}
+
+.desert-btn{
+  background-image: url(/src/images/dessert.svg);
+  background-size: cover;
+  background-color: #FFFFFF;
+  border: none;
+  width: 45.28px;
+  height: 59.71px;
+  left: 301px;
+  top: 171px;
+}

@@ -1,10 +1,13 @@
 import React from 'react';
 import FoodsHeader from '../Components/FoodsHeader';
-import '../Styles/Login.css';
+import Recipes from '../Components/Recipes';
 
 function Foods() {
   return (
-    <FoodsHeader />
+    <div>
+      <FoodsHeader />
+      <Recipes />
+    </div>
   );
 }
 

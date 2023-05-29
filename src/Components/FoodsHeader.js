@@ -4,7 +4,7 @@ import headerBackground from '../images/BackgroundHeader.svg';
 import foodsIcon from '../images/foods.svg';
 import recipesApp from '../images/logo_Header_Recipes_app.svg';
 import icon from '../images/ícone_Recipes_app.svg';
-import '../Styles/Foods.css';
+import '../Styles/FoodsHeader.css';
 import Footer from './Footer';
 
 function FoodsHeader() {
