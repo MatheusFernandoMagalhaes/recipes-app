@@ -7,10 +7,14 @@ function Login() {
   return (
     <div id="login-content">
       <img src={ Logo } alt="Logo" id="logo" />
-      <img src={ Tomates } alt="Tomates" id="tomates" />
-      <h1>Login</h1>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
+      <div className="tomate-wrapper">
+        <img src={ Tomates } alt="Tomates" id="tomates" />
+      </div>
+      <p className="login-title">Login</p>
+      <div className="inputs-wrapper">
+        <input className="login-input" type="email" placeholder="Email" />
+        <input className="login-input" type="password" placeholder="Password" />
+      </div>
       <button type="button" id="login-btn">Enter</button>
     </div>
   );

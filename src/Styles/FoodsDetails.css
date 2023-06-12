@@ -1,0 +1,224 @@
+.foods-details-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.foods-details {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  object-fit: cover;
+  width: 100%;
+  max-height: 180px;
+}
+
+.food-name {
+  margin-top: 50px;
+  position: absolute;
+  width: 147px;
+
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.105em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.dessert-icon{
+  position: absolute;
+  height: 50px;
+  left: 20px;
+  top: 14px;
+}
+
+.like-share-icons{
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.like-share-icons img{
+  height: 30px;
+}
+
+.food-details-block {  
+  display: flex;
+  flex-direction: column;
+  margin-top: 35px;
+  gap: 10px;
+  width: 90%;
+}
+
+.food-details-block > p {
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-indent: 10px;
+  color: #1A1B1C;
+}
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 17px;
+
+  box-sizing: border-box;
+
+  width: 98%;
+  background: #FFFFFF;
+  border: 0.554397px solid #B1B1B1;
+  border-radius: 5.35144px;
+
+}
+.food-details-block ul {
+font-family: 'Epilogue';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 14px;
+
+color: #1A1B1C;
+
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 17px;
+
+  box-sizing: border-box;
+
+  width: 98%;
+  background: #FFFFFF;
+  border: 0.554397px solid #B1B1B1;
+  border-radius: 5.35144px;
+
+}
+
+.instructions p {
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: #1A1B1C;
+}
+
+.video {
+  width: 98%;
+  height: 205.09px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+  border-radius: 0px;
+}
+
+.recommended-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.recommended-content {
+  box-sizing: border-box;
+  width: 150px;
+  background: #FFFFFF;
+  border: 0.517989px solid #B1B1B1;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.recommended-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.recommended-content p {
+  padding: 5px 14px;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 12px;
+
+  color: #1A1B1C;
+}
+
+.start-btn {
+  border: none;
+  width: 336px;
+  height: 40px;
+  background: #FCC436;
+  border-radius: 5px;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
+}
+
+.finish-btn {
+  border: none;
+  width: 336px;
+  height: 40px;
+  background: #FCC436;
+  border-radius: 5px;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-top: 20px;
+
+  color: #FFFFFF;
+
+}
+
+.ingredients-list input {
+  display: none;
+}
+
+.ingredients-list input + label:before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: white;
+  border: 3px solid #FCC436;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 3px; 
+  background-color: #FFFFFF;
+}
+
+.ingredients-list input:checked + label:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.0541 2.4866L10.0542 2.4865C10.3799 2.16081 10.3799 1.63937 10.0542 1.31368C9.72855 0.987991 9.20711 0.987991 8.88142 1.31368L3.78418 6.41091L2.11858 4.74531C1.79289 4.41963 1.27145 4.41963 0.94576 4.74531C0.620071 5.071 0.620071 5.59245 0.94576 5.91814L3.19241 8.16479C3.51807 8.49044 4.0448 8.49048 4.37049 8.16489C4.37053 8.16485 4.37056 8.16482 4.37059 8.16479L10.0541 2.4866Z' fill='%23FCC436' stroke='%23FCC436' stroke-width='0.597014'/%3E%3C/svg%3E%0A");
+  background-position: center;
+}

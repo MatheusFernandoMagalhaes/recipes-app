@@ -1,30 +1,29 @@
 .recipes-container {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   overflow: auto;
-  position: absolute;
-  width: 336.35px;
+  margin-top: 20px;
+  width: 100%;
+  gap: 10px;
   height: 522.21px;
-  left: 12px;
-  top: 250px;
-
+  padding-bottom: 60px;
+  padding-top: 250px;
 }
 
 .recipes-content {
   box-sizing: border-box;
-  width:50%;
-  height: 166.12px;
-  left: 12.12px;
-  top: 250.1px;
+
 
   background: #FFFFFF;
   border: 0.517989px solid #B1B1B1;
   border-radius: 5px;
+  max-height: 166px;
 }
 
 .recipes-content img {
   width: 100%;
+  object-fit: cover;
+  max-height: 140px;
 }
 
 .recipes-content span {
@@ -38,8 +37,4 @@
   
   color: #1A1B1C;
   
-}
-
-.spacing {
-  height: 190px;
 }

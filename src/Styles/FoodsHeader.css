@@ -1,24 +1,49 @@
 .header-container{
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background-color: #FFFFFF;
 }
 
-.background-image{
-  position: absolute;
+.backgroundHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  background: #FCDC36;
+  box-sizing: border-box;
+  padding: 0 21px;
+
+}
+
+.icons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+
+}
+
+.buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px ;
+
 }
 
 .icon{
-position: absolute;
 width: 42.6px;
 height: 39.28px;
-left: 26px;
-top: 6px;
 }
 
 .recipes-app{
-  position: absolute;
+  margin-top: 6px;
   width: 109.13px;
-  height: 16.97px;
-  left: 89.37px;
-  top: 20.78px;
+  height: 16px;
 }
 
 .search-btn {
@@ -26,11 +51,8 @@ top: 6px;
   background-size: cover;
   background-color: #FCDC36;
   border: none;
-  position: absolute;
   width: 26.85px;
   height: 26.85px;
-  left: 267px;
-  top: 14px;
 }
 
 .perfil-btn{
@@ -38,29 +60,31 @@ top: 6px;
   background-size: cover;
   background-color: #FCDC36;
   border: none;
-  position: absolute;
   width: 26.85px;
   height: 26.85px;
-  left: 310px;
-  top: 13px;
+}
+
+.meals-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .meals {
-  position: absolute;
-  width: 147px;
-  height: 64px;
-  left: 107px;
-  top: 83px;
+  margin-top: 31px;
+  margin-bottom: 24px;
+  height: 80px;
+ 
 }
 
 .categories {
   display: flex;
-  position: absolute;
   justify-content: space-between;
-  width: 333.28px;
+  width: 90%;
+  max-width: 450px;
   height: 59.71px;
-  left: 13px;
-  top: 171px;
 }
 
 .all-btn {
@@ -70,9 +94,6 @@ top: 6px;
   border: none;
   width: 45.28px;
   height: 59.71px;
-  left: 13px;
-  top: 171px;
-
 }
 
 .beef-btn{
@@ -82,8 +103,6 @@ top: 6px;
   border: none;
   width: 45.28px;
   height: 59.71px;
-  left: 69px;
-  top: 171px;
 }
 
 .goat-btn{
@@ -93,8 +112,6 @@ top: 6px;
   border: none;
   width: 45.28px;
   height: 59.71px;
-  left: 125px;
-  top: 171px;
 }
 
 .chicken-btn{
@@ -104,8 +121,6 @@ top: 6px;
   border: none;
   width: 45.28px;
   height: 59.71px;
-  left: 181px;
-  top: 171px;
 }
 
 .breakfast-btn{
@@ -115,8 +130,6 @@ top: 6px;
   border: none;
   width: 53.43px;
   height: 59.71px;
-  left: 237px;
-  top: 171px;
 
 }
 
@@ -127,6 +140,4 @@ top: 6px;
   border: none;
   width: 45.28px;
   height: 59.71px;
-  left: 301px;
-  top: 171px;
 }
