@@ -2,15 +2,15 @@ body {
   background-color: #ffffff;
 }
 #login-content {
+  align-items: center;
   background-image: url(../images/Background.png);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: absolute;
-  width: 100%;
   height: 57vh;
   left: 0px;
+  position: absolute;
   top: 0px;
+  width: 100%;
 }
 
 #logo {
@@ -22,52 +22,47 @@ body {
 }
 
 #tomates {
-  height: 279px;  
   filter: drop-shadow(0px 7px 15px rgba(68, 73, 85, 0.25));
+  height: 279px;  
 }
 
 .login-title {
-  width: 182px;
-  height: 21px;
-
+  color: #41197F;
   font-family: 'Epilogue', sans-serif;
+  font-size: 20px;
   font-style: italic;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
-
-  text-align: center;
+  height: 21px;
   letter-spacing: 0.165em;
-  text-transform: uppercase;
-
-  color: #41197F;
-
+  line-height: 20px;
   margin-bottom: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 182px;
 }
 
 .inputs-wrapper {
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
-  width: 100%;
   gap: 9px;
   margin-bottom: 9px;
+  width: 100%;
 }
 
 .login-input {
   all:unset;
+  border-radius: 5px;
+  border: 0.5px solid #41197F;
+  box-sizing: border-box;
   font-family: 'Epilogue';
+  font-size: 14px;
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
-  line-height: 14px;
-  box-sizing: border-box;
-  width: 75%;
   height: 40px;
+  line-height: 14px;
   text-indent: 10px;
-
-  border: 0.5px solid #41197F;
-  border-radius: 5px;
+  width: 75%;
 }
 
 .login-input::placeholder {
@@ -75,17 +70,17 @@ body {
 }
 
 #login-btn {
-  width: 75%;
-  min-height: 40px;
   background: #FCC436;
   border-radius: 5px;
+  color: #FFFFFF;
   font-family: 'Epilogue';
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 14px;
-  text-align: center;
   letter-spacing: 0.03em;
+  line-height: 14px;
+  min-height: 40px;
+  text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF;
+  width: 75%;
 }

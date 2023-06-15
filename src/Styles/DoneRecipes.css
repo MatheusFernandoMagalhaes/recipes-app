@@ -1,0 +1,135 @@
+.done-recipes-container {
+  margin-top: 125px;
+}
+
+.done-recipes-wrapper{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 38px;
+  width: 100%;
+}
+
+.check {
+  height: 40px;
+}
+
+.done-icons-wrapper{
+  display: flex;
+  gap: 30px;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.done-icons-wrapper img{
+  height: 90px;
+}
+
+.done-recipes-card-wrapper{
+  display: grid;
+  flex-direction: column;
+  gap: 15px;
+  grid-template-columns: 1fr;
+  margin-bottom: 60px;
+  overflow: auto;
+}
+
+.done-recipes-content {
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: 0.517989px solid #B1B1B1;
+  box-sizing: border-box;
+  display: flex;
+  height: 140px;
+}
+
+.image-content {
+  background-color: red;
+  height: 100%;
+  width: 50%;
+}
+.image-content img{
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.description-container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 50%;
+}
+
+.description-content {
+  height: 85%;
+  margin-left: 15px;
+  width: 85%;
+}
+
+.title-and-share {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  padding-top: 5px;
+}
+
+.title-and-share p {
+  color: #1A1B1C;
+  font-family: 'Epilogue';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+}
+
+.title-and-share img {
+  height: 20px;
+  width: 20px;
+}
+
+.done-categorie {
+  color: #797D86;
+  font-family: 'Epilogue';
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 300; 
+  line-height: 9px;  
+  margin-bottom: 25px;
+}
+
+.done-date {
+  color: #1A1B1C;
+  font-family: 'Epilogue';
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 9px;
+  margin-bottom: 40px;
+}
+
+.done-attributes {
+  color: #797D86;
+  display: flex;
+  font-family: 'Epilogue';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  gap: 5px;
+  line-height: 10px;
+  text-align: center;
+}
+
+.done-attributes div {
+  align-items: center;
+  background: #D9D9D9;
+  border-radius: 10px;
+  display: flex;
+  height: 15px;
+  justify-content: center;
+  width: 35px;
+}
