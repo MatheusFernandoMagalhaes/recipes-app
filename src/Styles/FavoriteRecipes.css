@@ -1,0 +1,37 @@
+.title {
+  color: #1A1B1C;
+  font-family: 'Epilogue';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.favorite-attributes {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  padding-top: 12px;
+  width: 100%;
+}
+
+.fav-share-btn {
+  background-color: #FFFFFF;
+  background-image: url(/src/images/Share.svg);
+  background-size: contain;
+  border: none;
+  height: 20px;
+  width: 20px;
+}
+
+.fav-like-btn {
+  background-color: #FFFFFF;
+  background-image: url(/src/images/like.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 20px;
+  width: 20px;
+}
