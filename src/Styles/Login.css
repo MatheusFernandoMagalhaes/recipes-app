@@ -69,7 +69,7 @@ body {
   color: #41197F;
 }
 
-#login-btn {
+.login-btn {
   background: #FCC436;
   border-radius: 5px;
   color: #FFFFFF;
@@ -83,4 +83,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   width: 75%;
+}
+
+.login-btn  button {
+  border: none;
 }
