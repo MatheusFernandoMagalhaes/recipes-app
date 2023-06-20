@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import FoodsOrDrinksCard from '../Components/FoodsOrDrinksCard';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
+import Recipes from '../Components/Recipe';
 import Context from '../Context/Context';
 
 function Drinks() {
@@ -15,6 +16,7 @@ function Drinks() {
     <>
       <Header />
       <FoodsOrDrinksCard />
+      <Recipes />
       <Footer />
     </>
   );
