@@ -1,10 +1,24 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import Context from '../Context/Context';
 import recipesApp from '../images/logo_Header_Recipes_app.svg';
 import icon from '../images/ícone_Recipes_app.svg';
-import '../Styles/FoodsHeader.css';
+import '../Styles/Header.css';
+import SearchInput from './SearchInput';
 
-function Header() {
+function FoodsHeader() {
+  const { searchButton, showInputPlace,
+    setShowInputPlace } = useContext(Context);
+
+  const handleClick = () => {
+    if (showInputPlace) {
+      setShowInputPlace(false);
+    } else {
+      setShowInputPlace(true);
+    }
+  };
+
   return (
     <header className="header-container">
       <div className="backgroundHeader">
@@ -13,11 +27,24 @@ function Header() {
           <img src={ recipesApp } alt="Recipes App" className="recipes-app" />
         </div>
         <div className="buttons-wrapper">
-          <button type="button" className="perfil-btn" />
+          {searchButton && (<button
+            type="button"
+            className="search-btn"
+            data-testid="search-top-btn"
+            onClick={ handleClick }
+          />)}
+          <Link to="profile">
+            <button
+              type="button"
+              className="perfil-btn"
+              data-testid="profile-top-btn"
+            />
+          </Link>
         </div>
       </div>
+      { showInputPlace && <SearchInput />}
     </header>
   );
 }
 
-export default Header;
+export default FoodsHeader;

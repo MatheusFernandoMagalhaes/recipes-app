@@ -8,7 +8,9 @@ function Recipes() {
     <div className="recipes-container">
       <div className="recipes-content">
         <img src={ Meal } alt="comida" />
-        <span>Chelsea Buns</span>
+        <div>
+          <span>Chelsea Buns</span>
+        </div>
       </div>
     </div>
   );

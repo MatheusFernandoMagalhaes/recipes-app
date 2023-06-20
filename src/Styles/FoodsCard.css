@@ -1,71 +1,9 @@
-.header-container{
-  background-color: #FFFFFF;
-  left: 0px;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  z-index: 2;
-}
-
-.backgroundHeader{
-  align-items: center;
-  background: #FCDC36;
-  box-sizing: border-box;
-  display: flex;
-  height: 52px;
-  justify-content: space-between;
-  padding: 0 21px;
-  width: 100%;
-}
-
-.icons-wrapper {
-  align-items: center;
-  display: flex;
-  gap: 17px;
-  justify-content: center;
-}
-
-.buttons-wrapper {
-  align-items: center;
-  display: flex;
-  gap: 16px ;
-  justify-content: center;
-}
-
-.icon{
-  height: 39.28px;
-  width: 42.6px;
-}
-
-.recipes-app{
-  height: 16px;
-  margin-top: 6px;
-  width: 109.13px;
-}
-
-.search-btn {
-  background-color: #FCDC36;
-  background-image: url(/src/images/icone_pesquisar.svg);
-  background-size: cover;
-  border: none;
-  height: 26.85px;
-  width: 26.85px;
-}
-
-.perfil-btn{
-  background-color: #FCDC36;
-  background-image: url(/src/images/icone_perfil.svg);
-  background-size: cover;
-  border: none;
-  height: 26.85px;
-  width: 26.85px;
-}
-
 .meals-wrapper{
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 70px;
   width: 100%;
 }
 

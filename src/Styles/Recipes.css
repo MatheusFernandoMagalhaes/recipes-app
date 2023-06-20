@@ -2,12 +2,9 @@
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr;
-  height: 522.21px;
   margin-top: 20px;
   overflow: auto;
   padding-bottom: 60px;
-  padding-top: 250px;
-  width: 100%;
 }
 
 .recipes-content {
@@ -15,7 +12,7 @@
   border-radius: 5px;
   border: 0.517989px solid #B1B1B1;
   box-sizing: border-box;
-  max-height: 166px;
+  height: 166px;
 }
 
 .recipes-content img {

@@ -1,12 +1,22 @@
-import React from 'react';
-import FoodsHeader from '../Components/FoodsHeader';
+import React, { useContext, useEffect } from 'react';
+import FoodsCard from '../Components/FoodsCard';
 import Footer from '../Components/Footer';
+import Header from '../Components/Header';
 import Recipes from '../Components/Recipes';
+import Context from '../Context/Context';
 
 function Foods() {
+  const { setSearchButton, setTitle } = useContext(Context);
+
+  useEffect(() => {
+    setSearchButton(true);
+    setTitle('Foods');
+  }, [setSearchButton, setTitle]);
+
   return (
     <>
-      <FoodsHeader />
+      <Header />
+      <FoodsCard />
       <Recipes />
       <Footer />
     </>
