@@ -1,4 +1,4 @@
-.meals-wrapper{
+.meals-or-drinks-wrapper{
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.meals {
+.meals-or-drinks {
   height: 80px;
   margin-bottom: 24px;
   margin-top: 31px;

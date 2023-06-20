@@ -18,11 +18,8 @@
   font-weight: 300;
   height: 40px;
   line-height: 14px;
-  width: 100%;
-}
-
-.input-search::placeholder {
   padding-left: 15px;
+  width: 100%;
 }
 
 .search-bar-radios-inputs{

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Context from './Context/Context';
 import DoneRecipes from './Pages/DoneRecipes';
 import Drinks from './Pages/Drinks';
+import DrinksDeatails from './Pages/DrinksDetails';
 import FavoriteRecipes from './Pages/Favorites';
 import Foods from './Pages/Foods';
 import FoodsDetails from './Pages/FoodsDetails';
@@ -14,15 +15,29 @@ function App() {
   const [searchButton, setSearchButton] = useState(true);
   const [title, setTitle] = useState('');
   const [showInputPlace, setShowInputPlace] = useState(false);
+  const [recipeCard, setRecipeCard] = useState(false);
+  const [results, setResults] = useState([]);
+  const [food, setFood] = useState(false);
+  const [drink, setDrink] = useState(false);
 
   return (
     <Context.Provider
-      value={ { searchButton,
+      value={ {
+        searchButton,
         setSearchButton,
         title,
         setTitle,
         showInputPlace,
-        setShowInputPlace } }
+        setShowInputPlace,
+        recipeCard,
+        setRecipeCard,
+        results,
+        setResults,
+        food,
+        setFood,
+        drink,
+        setDrink,
+      } }
     >
       <BrowserRouter>
         <Switch>
@@ -31,6 +46,7 @@ function App() {
           <Route path="/favorite-recipes" component={ FavoriteRecipes } />
           <Route path="/profile" component={ Profile } />
           <Route path="/foods/:id" component={ FoodsDetails } />
+          <Route path="/drinks/:id" component={ DrinksDeatails } />
           <Route path="/foods" component={ Foods } />
           <Route path="/drinks" component={ Drinks } />
           <Route exact path="/" component={ Login } />

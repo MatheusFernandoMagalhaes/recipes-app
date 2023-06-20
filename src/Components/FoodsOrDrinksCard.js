@@ -1,16 +1,19 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useContext } from 'react';
 import Context from '../Context/Context';
+import DrinksIcon from '../images/drinks2.svg';
 import FoodsIcon from '../images/foods.svg';
-import '../Styles/FoodsCard.css';
+import '../Styles/FoodsOrDrinksCard.css';
 import SearchBar from './SearchBar';
 
-function FoodsCard() {
-  const { showInputPlace } = useContext(Context);
+function FoodsOrDrinksCard() {
+  const { title, showInputPlace } = useContext(Context);
+  const iconSrc = title === 'Foods' ? FoodsIcon : DrinksIcon;
+  const altText = title === 'Foods' ? 'Meals' : 'Drinks';
 
   return (
-    <div className="meals-wrapper">
-      <img src={ FoodsIcon } alt="meals icon" className="meals" />
+    <div className="meals-or-drinks-wrapper">
+      <img src={ iconSrc } alt={ altText } className="meals-or-drinks" />
       { showInputPlace && <SearchBar />}
       <div className="categories">
         <button type="button" className="all-btn" />
@@ -23,4 +26,4 @@ function FoodsCard() {
     </div>
   );
 }
-export default FoodsCard;
+export default FoodsOrDrinksCard;

@@ -1,8 +1,7 @@
 import React, { useContext, useEffect } from 'react';
-import FoodsCard from '../Components/FoodsCard';
+import FoodsOrDrinksCard from '../Components/FoodsOrDrinksCard';
 import Footer from '../Components/Footer';
 import Header from '../Components/Header';
-import Recipes from '../Components/Recipes';
 import Context from '../Context/Context';
 
 function Foods() {
@@ -16,8 +15,7 @@ function Foods() {
   return (
     <>
       <Header />
-      <FoodsCard />
-      <Recipes />
+      <FoodsOrDrinksCard />
       <Footer />
     </>
   );
