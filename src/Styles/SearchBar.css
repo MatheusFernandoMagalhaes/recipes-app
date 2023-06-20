@@ -1,0 +1,116 @@
+.search-bar-wrapper{
+  background: #41197F;
+  border-radius: 10px;
+  height: 120px;
+  margin-bottom: 12px;
+  width: 340px;
+}
+
+.input-search {
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: 1px solid #B1B1B1;
+  box-sizing: border-box;
+  color: #797D86;
+  font-family: 'Epilogue';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  height: 40px;
+  line-height: 14px;
+  width: 100%;
+}
+
+.input-search::placeholder {
+  padding-left: 15px;
+}
+
+.search-bar-radios-inputs{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.search-bar-radios-inputs label{
+  align-items: center;
+  color: #FFFFFF;
+  display: inline-flex;
+  font-family: 'Epilogue';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  justify-content: center;
+  line-height: 12px;
+  margin-bottom: 10px;
+}
+
+.search-bar-radios-inputs input[type='radio']{
+  border-radius: 6px;
+  height: 15px;
+  vertical-align: middle;
+  width: 15px;
+}
+
+.search-bar-radios-inputs span {
+  line-height: 1;
+  margin-left: 3px; 
+  margin-top: 4px;
+}
+
+.search-bar-radios-inputs input[type='radio']{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Defina o tamanho desejado para o radio */
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  /* Defina a cor de fundo do radio não marcado */
+  background-color: #FFFFFF;
+  outline: none;
+  position: relative;
+}
+
+.search-bar-radios-inputs input[type='radio']::before {
+  /* Posicione o indicador "checked" */
+  content: '';
+  position: absolute;
+  /* Ajuste o tamanho do indicador "checked" em relação ao tamanho do radio */
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  /* Centralize o indicador "checked" dentro do radio */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Defina a cor de fundo do indicador "checked" */
+  background-color: #FFFFFF; /* Substitua pela cor desejada */
+}
+
+.search-bar-radios-inputs input[type='radio']:checked::before {
+  background-color:  #FCC436; 
+}
+
+
+.search-bar-search-btn{
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar-search-btn button{
+  background: #FCC436;
+  border-radius: 5px;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Epilogue';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  height: 25px;
+  letter-spacing: 0.05em;
+  line-height: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 210px;
+}

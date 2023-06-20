@@ -5,7 +5,6 @@ import Context from '../Context/Context';
 import recipesApp from '../images/logo_Header_Recipes_app.svg';
 import icon from '../images/ícone_Recipes_app.svg';
 import '../Styles/Header.css';
-import SearchBar from './SearchBar';
 
 function FoodsHeader() {
   const { searchButton, showInputPlace,
@@ -42,7 +41,6 @@ function FoodsHeader() {
           </Link>
         </div>
       </div>
-      { showInputPlace && <SearchBar />}
     </header>
   );
 }

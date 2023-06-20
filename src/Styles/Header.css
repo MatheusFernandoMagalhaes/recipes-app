@@ -1,10 +1,10 @@
 .header-container{
-  background-color: #FFFFFF;
-  left: 0px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: fixed;
-  top: 0px;
   width: 100%;
-  z-index: 2;
 }
 
 .backgroundHeader{
