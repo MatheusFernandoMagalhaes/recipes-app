@@ -1,14 +1,14 @@
 import propTypes from 'prop-types';
 import React from 'react';
 
-function Recomendation({ sugestions, type }) {
+function Recomendation({ suggestions, type }) {
   const handleRecomendations = () => {
     const maxRecomendations = 6;
     if (type === 'drink') {
       return (
         <div className="recommended-wrapper">
-          {sugestions.filter((_, index) => index < maxRecomendations)
-            .map((sugestion, index) => (
+          {suggestions.filter((_, index) => index < maxRecomendations)
+            .map((suggestion, index) => (
               <div
                 key={ index }
                 className="recommended-content"
@@ -16,11 +16,11 @@ function Recomendation({ sugestions, type }) {
               >
                 <img
                   className="recommended-image"
-                  src={ sugestion.strDrinkThumb }
-                  alt={ sugestion.strDrink }
+                  src={ suggestion.strDrinkThumb }
+                  alt={ suggestion.strDrink }
                 />
-                <p>{ sugestion.strDrink }</p>
-                <p>{sugestion.strCategory}</p>
+                <p>{ suggestion.strDrink }</p>
+                <p>{suggestion.strCategory}</p>
               </div>
             ))}
         </div>
@@ -28,8 +28,8 @@ function Recomendation({ sugestions, type }) {
     }
     return (
       <div className="recommended-wrapper">
-        {sugestions.filter((_, index) => index < maxRecomendations)
-          .map((sugestion, index) => (
+        {suggestions.filter((_, index) => index < maxRecomendations)
+          .map((suggestion, index) => (
             <div
               key={ index }
               className="recommended-content"
@@ -37,11 +37,11 @@ function Recomendation({ sugestions, type }) {
             >
               <img
                 className="recommended-image"
-                src={ sugestion.strMealThumb }
-                alt={ sugestion.strMeal }
+                src={ suggestion.strMealThumb }
+                alt={ suggestion.strMeal }
               />
-              <p>{ sugestion.strMeal }</p>
-              <p>{sugestion.strCategory}</p>
+              <p>{ suggestion.strMeal }</p>
+              <p>{suggestion.strCategory}</p>
             </div>
           ))}
       </div>
@@ -54,7 +54,7 @@ function Recomendation({ sugestions, type }) {
   );
 }
 Recomendation.propTypes = {
-  sugestions: propTypes.arrayOf(propTypes.object),
+  suggestions: propTypes.arrayOf(propTypes.object),
   type: propTypes.string,
 }.isRequired;
 

@@ -13,7 +13,7 @@ function DrinksDetails() {
   const [cocktail, setCocktail] = useState(null);
   const [ingredient, setIngredient] = useState([]);
   const { params: { id } } = useRouteMatch();
-  const { sugestions, setSugestions } = useContext(Context);
+  const { suggestions, setSuggestions } = useContext(Context);
 
   const mapIngredients = (obj) => {
     const ingredients = [];
@@ -35,14 +35,14 @@ function DrinksDetails() {
     if (cocktail === null) {
       const drinkRecipe = async () => {
         const drink = await getCocktailId(id);
-        const sugest = await getMealsAPI();
-        setSugestions(sugest);
+        const suggest = await getMealsAPI();
+        setSuggestions(suggest);
         setCocktail(drink.drinks[0]);
         setIngredient(mapIngredients(drink.drinks[0]));
       };
       drinkRecipe();
     }
-  }, [cocktail]);
+  }, [cocktail, id, setSuggestions]);
 
   if (cocktail === null) return <p>Drinks Details null</p>;
   return (
@@ -97,7 +97,7 @@ function DrinksDetails() {
       </div>
       <div className="food-details-block">
         <p>Recomended</p>
-        <Recomendation sugestions={ sugestions } />
+        <Recomendation suggestions={ suggestions } />
       </div>
       <button className="start-btn" type="button">Start Recipe</button>
     </div>

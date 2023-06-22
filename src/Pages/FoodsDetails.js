@@ -14,7 +14,7 @@ function FoodsDetails() {
   const [meal, setMeal] = useState(null);
   const [ingredient, setIngredient] = useState([]);
   const { params: { id } } = useRouteMatch();
-  const { sugestions, setSugestions } = useContext(Context);
+  const { suggestions, setSuggestions } = useContext(Context);
 
   const mapIngredients = (obj) => {
     const ingredients = [];
@@ -38,12 +38,12 @@ function FoodsDetails() {
         const meals = await getMealsId(id);
         const sugest = await getDrinksAPI();
         setMeal(meals.meals[0]);
-        setSugestions(sugest);
+        setSuggestions(sugest);
         setIngredient(mapIngredients(meals.meals[0]));
       };
       mealRecipe();
     }
-  }, [meal, id]);
+  }, [meal, id, setSuggestions]);
   if (meal === null) return <p>Foods Details</p>;
 
   const youtubeSrc = meal.strMeal
@@ -114,7 +114,7 @@ function FoodsDetails() {
       </div>
       <div className="food-details-block">
         <p>Recomended</p>
-        <Recomendation sugestions={ sugestions } type="drink" />
+        <Recomendation suggestions={ suggestions } type="drink" />
         {/* <div className="recommended-wrapper">
           <div className="recommended-content">
             <img src={ Recommended } alt="a" className="recommended-image" />

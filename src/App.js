@@ -19,7 +19,7 @@ function App() {
   const [results, setResults] = useState([]);
   const [food, setFood] = useState(false);
   const [drink, setDrink] = useState(false);
-  const [sugestions, setSugestions] = useState([]);
+  const [suggestions, setSuggestions] = useState([]);
 
   return (
     <Context.Provider
@@ -38,8 +38,8 @@ function App() {
         setFood,
         drink,
         setDrink,
-        sugestions,
-        setSugestions,
+        suggestions,
+        setSuggestions,
       } }
     >
       <BrowserRouter>
