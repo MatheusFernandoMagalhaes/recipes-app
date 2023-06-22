@@ -15,14 +15,14 @@ function FoodsOrDrinksCard() {
     <div className="meals-or-drinks-wrapper">
       <img src={ iconSrc } alt={ altText } className="meals-or-drinks" />
       { showInputPlace && <SearchBar />}
-      <div className="categories">
+      {/* <div className="categories">
         <button type="button" className="all-btn" />
-        <button type="button" className="beef-btn" />
-        <button type="button" className="goat-btn" />
-        <button type="button" className="chicken-btn" />
-        <button type="button" className="breakfast-btn" />
-        <button type="button" className="desert-btn" />
-      </div>
+        <button type="button" className="Beef-btn" />
+        <button type="button" className="Goat-btn" />
+        <button type="button" className="Chicken-btn" />
+        <button type="button" className="Breakfast-btn" />
+        <button type="button" className="Dessert-btn" />
+      </div> */}
     </div>
   );
 }

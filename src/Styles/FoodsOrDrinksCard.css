@@ -16,12 +16,12 @@
 .categories {
   display: flex;
   height: 59.71px;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 450px;
-  width: 90%;
+  width: 100%;
 }
 
-.all-btn {
+.all-meal-btn {
   background-color: #FFFFFF;
   background-image: url(/src/images/All.svg);
   background-size: cover;
@@ -30,7 +30,7 @@
   width: 45.28px;
 }
 
-.beef-btn{
+.Beef-btn{
   background-color: #FFFFFF;
   background-image: url(/src/images/beef.svg);
   background-size: cover;
@@ -39,7 +39,7 @@
   width: 45.28px;
 }
 
-.goat-btn{
+.Goat-btn{
   background-color: #FFFFFF;
   background-image: url(/src/images/goat.svg);
   background-size: cover;
@@ -48,7 +48,7 @@
   width: 45.28px;
 }
 
-.chicken-btn{
+.Chicken-btn{
   background-color: #FFFFFF;
   background-image: url(/src/images/chicken.svg);
   background-size: cover;
@@ -57,7 +57,7 @@
   width: 45.28px;
 }
 
-.breakfast-btn{
+.Breakfast-btn{
   background-color: #FFFFFF;
   background-image: url(/src/images/breakfast.svg);
   background-size: cover;
@@ -66,9 +66,63 @@
   width: 53.43px;
 }
 
-.desert-btn{
+.Dessert-btn{
   background-color: #FFFFFF;
   background-image: url(/src/images/dessert.svg);
+  background-size: cover;
+  border: none;
+  height: 59.71px;
+  width: 45.28px;
+}
+
+.all-drink-btn {
+  background-color: #FFFFFF;
+  background-image: url(/src/images/All_drink.svg);
+  background-size: cover;
+  border: none;
+  height: 59.71px;
+  width: 45.28px;
+}
+
+.Ordinary.Drink-btn {
+  background-color: #FFFFFF;
+  background-image: url(/src/images/Ordinary_drink.svg);
+  background-size: cover;
+  border: none;
+  height: 59.71px;
+  width: 45.28px;
+}
+
+.Cocktail-btn {
+  background-color: #FFFFFF;
+  background-image: url(/src/images/cocktail.svg);
+  background-size: cover;
+  border: none;
+  height: 59.71px;
+  width: 45.28px;
+}
+
+.Shake-btn {
+  background-color: #FFFFFF;
+  background-image: url(/src/images/shake.svg);
+  background-size: cover;
+  border: none;
+  height: 59.71px;
+  width: 45.28px;
+}
+
+.Other.Unknown-btn {
+  background-color: #FFFFFF;
+  background-image: url(/src/images/other.svg);
+  background-size: cover;
+  border: none;
+  height: 59.71px;
+  width: 45.28px;
+}
+
+.Cocoa-btn {
+  background-color: #FFFFFF;
+  background-image: url(/src/images/cocoa.svg);
   background-size: cover;
   border: none;
   height: 59.71px;

@@ -12,7 +12,7 @@
   border-radius: 5px;
   border: 0.517989px solid #B1B1B1;
   box-sizing: border-box;
-  height: 180px;
+  max-width: 140px;
 }
 
 .recipes-content img {
@@ -22,10 +22,9 @@
 }
 
 .recipe-text {
-  padding-top: 8px;
   display: flex;  
-  align-items: center;
-  justify-content: start;
+  justify-content: center;
+  padding: 2px 0px;
 }
 
 .recipes-content span {
@@ -34,6 +33,6 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 12px;
-  margin-left: 20px;
+  line-height: 17px;
+  text-align: center;
 }
