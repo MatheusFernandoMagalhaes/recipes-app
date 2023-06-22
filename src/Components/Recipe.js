@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {
   getDrinksAPI,
   getDrinksCategoriesAPI,
@@ -24,6 +24,7 @@ function Recipes() {
   const [beverages, setBeverages] = useState();
   const [foodsCategories, setFoodsCategories] = useState();
   const [beveragesCategories, setBeveragesCategories] = useState([]);
+  const [toggle, setToggle] = useState(true);
 
   useEffect(() => {
     const recipesApi = async () => {
@@ -47,20 +48,27 @@ function Recipes() {
   }
 
   const handleFilter = ({target: {name}}) => {
-    if (pathname === '/foods') {
+    setToggle(!toggle)
+    if (pathname === '/foods' && toggle) {
       getMealsCategoriesFilter(name).then((response) => setFoods(response));
 
+    } else {
+      getMealsAPI().then((response) => setFoods(response))
     }
-    if (pathname === '/drinks') {
+    if (pathname === '/drinks' && toggle) {
       getDrinksCategoriesFilter(name).then((response) => setBeverages(response));
+    } else {
+      getDrinksAPI().then((response) => setBeverages(response))
     }
   };
   const clearFilter = () => {
     if (pathname === '/foods') {
       getMealsAPI().then((response) => setFoods(response));
     }
-    if (pathname === '/drinks') {
+    if (pathname === '/drinks' && toggle) {
       getDrinksAPI().then((response) => setBeverages(response));
+    } else {
+      getDrinksAPI().then((response) => setBeverages(response))
     }
   };
 
@@ -124,6 +132,7 @@ function Recipes() {
         <div className="recipes-container">
           {foods?.filter((_, index) => index <= mealsLength)
             .map((recipe, index) => (
+             <Link to={`/foods/${recipe.idMeal}`}>
               <div
                 key={ index }
                 data-testid={`${index}-recipe-card`}
@@ -144,39 +153,47 @@ function Recipes() {
                   </span>
                 </div>
               </div>
+             </Link>
             ))}
         </div>
       );
     }
     if (pathname === '/drinks') {
-      return (
-        <div className="recipes-container">
-          {beverages.filter((_, index) => index <= mealsLength)
-            .map((recipe, index) => (
-              <div
-                key={ index }
-                data-testid={`${index}-recipe-card`}
-                className="recipes-content"
-              >
-                <img
-                  data-testid={`${index}-card-img`}
-                  src={ recipe.strDrinkThumb }
-                  className="tamanho"
-                  alt={ recipe.strMeal }
-                />
-                <div className="recipe-text">
-                  <span
-                    data-testid={`${index}-card-name`}
+      if(beverages === null) {
+        <Loading />
+      } else {
+        return (
+          <div className="recipes-container">
+            {beverages.filter((_, index) => index <= mealsLength)
+              .map((recipe, index) => (
+               <Link to={`/drinks/${recipe.idDrink}`}>
+                <div
+                  key={ index }
+                  data-testid={`${index}-recipe-card`}
+                  className="recipes-content"
+                >
+                  <img
+                    data-testid={`${index}-card-img`}
                     src={ recipe.strDrinkThumb }
-                  >
-                    {recipe.strDrink}
-                  </span>
+                    className="tamanho"
+                    alt={ recipe.strMeal }
+                  />
+                  <div className="recipe-text">
+                    <span
+                      data-testid={`${index}-card-name`}
+                      src={ recipe.strDrinkThumb }
+                    >
+                      {recipe.strDrink}
+                    </span>
+                  </div>
                 </div>
-              </div>))}
-        </div>
-      );
-    }
-  };
+               </Link>
+              ))}
+          </div>
+        );
+      }
+    }; 
+      }
 
   return (
     <div className="result-container">
