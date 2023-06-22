@@ -12,7 +12,7 @@ function RecipesInProgressCard() {
       <div className="foods-details">
         <img src={ Banner } alt="Foods banner" className="banner" />
         <p className="food-name">Chelsea Buns</p>
-        <img src={ DessertIcon } alt="Desert Icon" className="dessert-icon" />
+        <img src={ DessertIcon } alt="Desert Icon" className="category-icon" />
         <div className="like-share-icons">
           <img src={ ShareIcon } alt="Share Icon" />
           <img src={ LikeIcon } alt="Like Icon" />

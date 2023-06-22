@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Context from './Context/Context';
 import DoneRecipes from './Pages/DoneRecipes';
 import Drinks from './Pages/Drinks';
-import DrinksDeatails from './Pages/DrinksDetails';
+import DrinksDetails from './Pages/DrinksDetails';
 import FavoriteRecipes from './Pages/Favorites';
 import Foods from './Pages/Foods';
 import FoodsDetails from './Pages/FoodsDetails';
@@ -19,6 +19,7 @@ function App() {
   const [results, setResults] = useState([]);
   const [food, setFood] = useState(false);
   const [drink, setDrink] = useState(false);
+  const [sugestions, setSugestions] = useState([]);
 
   return (
     <Context.Provider
@@ -37,6 +38,8 @@ function App() {
         setFood,
         drink,
         setDrink,
+        sugestions,
+        setSugestions,
       } }
     >
       <BrowserRouter>
@@ -46,7 +49,7 @@ function App() {
           <Route path="/favorite-recipes" component={ FavoriteRecipes } />
           <Route path="/profile" component={ Profile } />
           <Route path="/foods/:id" component={ FoodsDetails } />
-          <Route path="/drinks/:id" component={ DrinksDeatails } />
+          <Route path="/drinks/:id" component={ DrinksDetails } />
           <Route path="/foods" component={ Foods } />
           <Route path="/drinks" component={ Drinks } />
           <Route exact path="/" component={ Login } />
