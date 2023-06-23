@@ -44,7 +44,10 @@ function App() {
     >
       <BrowserRouter>
         <Switch>
-          <Route path="/foods/:id/in-progress" component={ RecipeInProgress } />
+          <Route
+            path={ ['/foods/:id/in-progress', '/drinks/:id/in-progress'] }
+            component={ RecipeInProgress }
+          />
           <Route path="/done-recipes" component={ DoneRecipes } />
           <Route path="/favorite-recipes" component={ FavoriteRecipes } />
           <Route path="/profile" component={ Profile } />

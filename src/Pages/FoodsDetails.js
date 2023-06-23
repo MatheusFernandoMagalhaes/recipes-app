@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useRouteMatch } from 'react-router-dom';
+import { useHistory, useRouteMatch } from 'react-router-dom';
 import Recomendation from '../Components/Recomendation';
 import Context from '../Context/Context';
 import DessertIcon from '../images/dessert.svg';
@@ -15,6 +15,13 @@ function FoodsDetails() {
   const [ingredient, setIngredient] = useState([]);
   const { params: { id } } = useRouteMatch();
   const { suggestions, setSuggestions } = useContext(Context);
+  const [continueButton, setContinueButton] = useState(true);
+
+  const history = useHistory();
+  const handleClick = () => {
+    localStorage.setItem('inProgressRecipes', id);
+    history.push(`/foods/${id}/in-progress`);
+  };
 
   const mapIngredients = (obj) => {
     const ingredients = [];
@@ -33,6 +40,12 @@ function FoodsDetails() {
   };
 
   useEffect(() => {
+    const idMeal = localStorage.getItem('inProgressRecipes');
+    if (id.includes(idMeal)) {
+      setContinueButton(true);
+    } else {
+      setContinueButton(false);
+    }
     if (meal === null) {
       const mealRecipe = async () => {
         const meals = await getMealsId(id);
@@ -126,7 +139,15 @@ function FoodsDetails() {
           </div>
         </div> */}
       </div>
-      <button className="start-btn" type="button">Start Recipe</button>
+      <button
+        className="start-btn"
+        type="button"
+        data-testid="start-recipe-btn"
+        onClick={ handleClick }
+      >
+        {continueButton ? 'Continue Recipe' : 'Start Recipe'}
+
+      </button>
     </div>
   );
 }
