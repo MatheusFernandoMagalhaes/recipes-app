@@ -1,10 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
+import clipboardCopy from 'clipboard-copy';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { useHistory, useRouteMatch } from 'react-router-dom';
 import Recomendation from '../Components/Recomendation';
 import Context from '../Context/Context';
 import DessertIcon from '../images/dessert.svg';
-import LikeIcon from '../images/like.svg';
-import ShareIcon from '../images/Share.svg';
 import { getDrinksAPI } from '../Services/Drinks';
 import { getMealsId } from '../Services/getRecipesId';
 import '../Styles/FoodsDetails.css';
@@ -16,11 +15,26 @@ function FoodsDetails() {
   const { params: { id } } = useRouteMatch();
   const { suggestions, setSuggestions } = useContext(Context);
   const [continueButton, setContinueButton] = useState(true);
+  const timeoutRef = useRef();
 
   const history = useHistory();
   const handleClick = () => {
     localStorage.setItem('inProgressRecipes', id);
     history.push(`/foods/${id}/in-progress`);
+  };
+
+  const handleShare = ({ target }) => {
+    const TWO_SECONDS = 2000;
+    const FOUR_SECONDS = 4000;
+    clipboardCopy(window.location.href);
+    target.innerText = 'Link copied!';
+    clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      target.innerText = 'Compartilhar';
+    }, TWO_SECONDS);
+    setTimeout(() => {
+      target.innerText = '';
+    }, FOUR_SECONDS);
   };
 
   const mapIngredients = (obj) => {
@@ -87,8 +101,19 @@ function FoodsDetails() {
           // data-testid="recipe-category"
         />
         <div className="like-share-icons">
-          <img src={ ShareIcon } alt="Share Icon" />
-          <img src={ LikeIcon } alt="Like Icon" />
+          <button
+            type="button"
+            alt="Share Icon"
+            data-testid="share-btn"
+            className="share-btn"
+            onClick={ handleShare }
+          />
+          <button
+            type="button"
+            alt="Like Icon"
+            data-testid="favorite-btn"
+            className="like-btn"
+          />
         </div>
       </div>
       <div className="food-details-block">

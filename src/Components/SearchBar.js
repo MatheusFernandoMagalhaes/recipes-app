@@ -2,13 +2,11 @@ import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Context from '../Context/Context';
 import '../Styles/SearchBar.css';
-import RecipeCard from './RecipeCard';
 
 function SearchBar() {
   const [searchIngredient, setSearchIngredient] = useState('');
   const [searchTag, setSearchTag] = useState('');
-  const { title, results, setResults,
-    food, setFood, drink, setDrink } = useContext(Context);
+  const { title, setResults, setFood, setDrink } = useContext(Context);
   const history = useHistory();
   const alertError = 'Sorry, we haven\'t found any recipes for these filters.';
 
@@ -167,13 +165,6 @@ function SearchBar() {
         </button>
       </div>
 
-      {results !== undefined && food && (
-        <RecipeCard />
-      )}
-
-      {results !== undefined && drink && (
-        <RecipeCard />
-      )}
     </div>
   );
 }

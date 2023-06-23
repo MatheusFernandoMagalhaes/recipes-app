@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import Context from '../Context/Context';
 import {
   getDrinksAPI,
   getDrinksCategoriesAPI,
@@ -20,7 +21,7 @@ const mealsLength = 11;
 function Recipes() {
   const history = useHistory();
   const { location: { pathname } } = history;
-  const [foods, setFoods] = useState();
+  const {results, setResults} = useContext(Context);
   const [beverages, setBeverages] = useState();
   const [foodsCategories, setFoodsCategories] = useState();
   const [beveragesCategories, setBeveragesCategories] = useState([]);
@@ -32,7 +33,7 @@ function Recipes() {
       const dataDrinks = await getDrinksAPI();
       const categoriesMeals = await getMealsCategoriesAPI();
       const categoriesDrinks = await getDrinksCategoriesAPI();
-      setFoods(dataMeals);
+      setResults(dataMeals);
       setBeverages(dataDrinks);
       setFoodsCategories(categoriesMeals);
       setBeveragesCategories(categoriesDrinks);
@@ -40,7 +41,7 @@ function Recipes() {
     recipesApi();
   }, []);
 
-  if (foods === undefined) {
+  if (results === undefined) {
     return (<Loading />);
   }
   if (beverages === undefined) {
@@ -50,10 +51,10 @@ function Recipes() {
   const handleFilter = ({target: {name}}) => {
     setToggle(!toggle)
     if (pathname === '/foods' && toggle) {
-      getMealsCategoriesFilter(name).then((response) => setFoods(response));
+      getMealsCategoriesFilter(name).then((response) => setResults(response));
 
     } else {
-      getMealsAPI().then((response) => setFoods(response))
+      getMealsAPI().then((response) => setResults(response))
     }
     if (pathname === '/drinks' && toggle) {
       getDrinksCategoriesFilter(name).then((response) => setBeverages(response));
@@ -63,7 +64,7 @@ function Recipes() {
   };
   const clearFilter = () => {
     if (pathname === '/foods') {
-      getMealsAPI().then((response) => setFoods(response));
+      getMealsAPI().then((response) => setResults(response));
     }
     if (pathname === '/drinks' && toggle) {
       getDrinksAPI().then((response) => setBeverages(response));
@@ -130,7 +131,7 @@ function Recipes() {
     if (pathname === '/foods') {
       return (
         <div className="recipes-container">
-          {foods?.filter((_, index) => index <= mealsLength)
+          {results?.filter((_, index) => index <= mealsLength)
             .map((recipe, index) => (
              <Link to={`/foods/${recipe.idMeal}`}>
               <div

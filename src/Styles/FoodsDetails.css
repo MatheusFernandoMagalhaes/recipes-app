@@ -53,6 +53,26 @@
   height: 30px;
 }
 
+.share-btn {
+  background: transparent;
+  background-image: url(/src/images/Share.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 30px;
+  width: 30px;
+}
+
+.like-btn {
+  background: transparent;
+  background-image: url(/src/images/like.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 30px;
+  width: 30px;
+}
+
 .food-details-block {  
   display: flex;
   flex-direction: column;

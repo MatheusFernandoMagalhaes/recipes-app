@@ -70,6 +70,10 @@ body {
 }
 
 .login-btn {
+  width: 75%;
+}
+
+.login-btn button{
   background: #FCC436;
   border-radius: 5px;
   color: #FFFFFF;
@@ -82,9 +86,13 @@ body {
   min-height: 40px;
   text-align: center;
   text-transform: uppercase;
-  width: 75%;
+  width: 100%;
 }
 
 .login-btn  button {
   border: none;
+}
+
+.login-btn  button:disabled {
+  opacity: 0.2;
 }
