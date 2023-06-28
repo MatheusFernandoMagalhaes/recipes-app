@@ -14,6 +14,7 @@ function DrinksDetails() {
   const { params: { id } } = useRouteMatch();
   const { suggestions, setSuggestions } = useContext(Context);
   const [continueButton, setContinueButton] = useState(true);
+  const [favorite, setFavorite] = useState(false);
   const timeoutRef = useRef();
 
   const history = useHistory();
@@ -36,6 +37,27 @@ function DrinksDetails() {
     }, FOUR_SECONDS);
   };
 
+  const handleFavorite = () => {
+    setFavorite(!favorite);
+    const oldObj = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
+    const {
+      idDrink,
+      strCategory,
+      strDrink,
+      strAlcoholic,
+      strDrinkThumb } = cocktail;
+    const newObj = {
+      id: idDrink,
+      type: 'drink',
+      nationality: '',
+      category: strCategory,
+      alcoholicOrNot: strAlcoholic,
+      name: strDrink,
+      image: strDrinkThumb };
+    oldObj.push(newObj);
+    localStorage.setItem('favoriteRecipes', JSON.stringify(oldObj));
+  };
+
   const mapIngredients = (obj) => {
     const ingredients = [];
     let entries = Object.entries(obj);
@@ -54,6 +76,16 @@ function DrinksDetails() {
 
   useEffect(() => {
     const idDrink = localStorage.getItem('inProgressRecipes');
+    const idFavorite = localStorage.getItem('favoriteRecipes');
+    if (idFavorite !== null) {
+      const obj = JSON.parse(idFavorite);
+      const favoriteRecipe = obj.some((e) => e.id.includes(id));
+      if (favoriteRecipe) {
+        setFavorite(true);
+      } else {
+        setFavorite(false);
+      }
+    }
     if (id.includes(idDrink)) {
       setContinueButton(true);
     } else {
@@ -107,6 +139,7 @@ function DrinksDetails() {
             alt="Like Icon"
             data-testid="favorite-btn"
             className="like-btn"
+            onClick={ handleFavorite }
           />
         </div>
       </div>
