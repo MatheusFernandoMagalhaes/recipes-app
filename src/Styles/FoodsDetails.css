@@ -13,6 +13,7 @@
   width: 100%;
 }
 
+
 .banner {
   max-height: 180px;
   object-fit: cover;
@@ -32,6 +33,22 @@
   text-align: center;
   text-transform: uppercase;
   width: 147px;
+}
+
+.food-category{
+  color: #FFFFFF;
+  font-family: 'Epilogue';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.105em;
+  line-height: 23px;
+  margin-top: 150px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  width: 147px;
+
 }
 
 .category-icon{
@@ -189,6 +206,12 @@
   width: 336px;
 }
 
+.finish-button-container{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .finish-btn {
   background: #FCC436;
   border-radius: 5px;
@@ -206,6 +229,10 @@
   text-transform: uppercase;
   width: 336px;
 }
+
+button:disabled {
+  opacity: 0.2;
+} 
 
 .ingredients-list input {
   display: none;
