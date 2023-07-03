@@ -132,3 +132,44 @@
   justify-content: center;
   width: 35px;
 }
+
+.all-btn-done {
+  background: transparent;
+  background-image: url(/src/images/Logo_All.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 90px;
+  width: 90px;
+}
+
+.foods-btn-done {
+  background: transparent;
+  background-image: url(/src/images/Logo_foods.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 90px;
+  width: 90px;
+}
+
+.drinks-btn-done {
+  background: transparent;
+  background-image: url(/src/images/Logo_drinks.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 90px;
+  width: 90px;
+}
+
+.share-btn-done {
+  background: transparent;
+  background-image: url(/src/images/Share.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  height: 20px;
+  width: 20px;
+
+}

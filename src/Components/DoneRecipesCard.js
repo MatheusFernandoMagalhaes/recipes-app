@@ -1,55 +1,114 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-max-depth */
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React from 'react';
-import DoneRecipesLogo from '../images/Done_recipes.svg';
-import Check from '../images/Group_10.svg';
-import All from '../images/Logo_All.svg';
-import Drinks from '../images/Logo_drinks.svg';
-import Foods from '../images/Logo_foods.svg';
-import Meal from '../images/Mealstest.svg';
-import Share from '../images/Share.svg';
+import clipboardCopy from 'clipboard-copy';
+import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import '../Styles/DoneRecipes.css';
 
-function DoneRecipesCard() {
+function DoneRecipesCard(props) {
+  const timeoutRef = useRef();
+  const { recipe, index } = props;
+
+  const {
+    name,
+    image,
+    category,
+    nationality,
+    type,
+    alcoholicOrNot,
+    doneDate,
+    tags,
+    id,
+  } = recipe;
+
+  const handleShare = ({ target }) => {
+    const TWO_SECONDS = 2000;
+    const FOUR_SECONDS = 4000;
+    clipboardCopy(`http://localhost:3000/foods/${target.id}`);
+    target.innerText = 'Link copied!';
+    clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      target.innerText = 'Compartilhar';
+    }, TWO_SECONDS);
+    setTimeout(() => {
+      target.innerText = '';
+    }, FOUR_SECONDS);
+  };
+
   return (
-    <div className="done-recipes-container">
-      <div className="done-recipes-wrapper">
-        <img src={ Check } alt="Yellow check" className="check" />
-        <img src={ DoneRecipesLogo } alt="Done Recipes" className="done-recipes" />
+    <div className="done-recipes-content">
+      <div className="image-content">
+        {type === 'food' ? (
+          <Link to={ `/foods/${id}` }>
+            <img
+              src={ image }
+              alt={ name }
+              data-testid={ `${index}-horizontal-image` }
+            />
+          </Link>
+        ) : (
+          <Link to={ `/drinks/${id}` }>
+            <img
+              src={ image }
+              alt={ name }
+              data-testid={ `${index}-horizontal-image` }
+            />
+          </Link>
+        )}
       </div>
-      <div className="done-icons-wrapper">
-        <img src={ All } alt="All icon" />
-        <img src={ Foods } alt="Foods icon" />
-        <img src={ Drinks } alt="Drinks icon" />
-      </div>
-      <div className="done-recipes-card-wrapper">
-        {/* done card starts here */}
-        <div className="done-recipes-content">
-          <div className="image-content">
-            <img src={ Meal } alt="Meal" />
+      <div className="description-container">
+        <div className="description-content">
+          <div className="title-and-share">
+            {type === 'food' ? (
+              <Link to={ `/foods/${id}` }>
+                <p>{name}</p>
+              </Link>
+            ) : (
+              <Link to={ `/drinks/${id}` }>
+                <p>{name}</p>
+              </Link>
+            )}
+            <button
+              id={ id }
+              type="button"
+              className="share-btn-done"
+              data-testid={ `${index}-horizontal-share-btn` }
+              onClick={ handleShare }
+            />
           </div>
-          <div className="description-container">
-            <div className="description-content">
-              <div className="title-and-share">
-                <p>Chelsea buns</p>
-                <img src={ Share } alt="Share icon" />
+          <div className="done-categorie">
+            <p data-testid={ `${index}-horizontal-top-text` }>
+              {`${nationality} • ${category}`}
+            </p>
+            {type === 'drink' && alcoholicOrNot === 'Alcoholic' && (
+              <p
+                data-testid={ `${index}-horizontal-name` }
+                key={ name }
+              >
+                {alcoholicOrNot}
+              </p>
+            )}
+          </div>
+          <div className="done-date">
+            <p>
+              Done in:
+              {' '}
+              {doneDate}
+            </p>
+          </div>
+          <div className="done-attributes">
+            {tags !== '' && tags.map((tag, index2) => (
+              <div
+                data-testid={ `${index}-${tag}-horizontal-tag` }
+                key={ index2 }
+              >
+                {tag}
               </div>
-              <div className="done-categorie">
-                <p>British • Dessert</p>
-              </div>
-              <div className="done-date">
-                <p>Done in: 20/10/2021</p>
-              </div>
-              <div className="done-attributes">
-                <div>bun</div>
-                <div>baking</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-
       </div>
-
     </div>
   );
 }

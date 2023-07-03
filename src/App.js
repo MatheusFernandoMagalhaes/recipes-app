@@ -20,6 +20,7 @@ function App() {
   const [food, setFood] = useState(false);
   const [drink, setDrink] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
+  const [doneRecipes, setDoneRecipes] = useState([]);
 
   return (
     <Context.Provider
@@ -40,6 +41,8 @@ function App() {
         setDrink,
         suggestions,
         setSuggestions,
+        doneRecipes,
+        setDoneRecipes,
       } }
     >
       <BrowserRouter>
