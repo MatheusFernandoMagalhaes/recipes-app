@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/control-has-associated-label */
-/* eslint-disable jsx-a11y/label-has-associated-control */
+
 import clipboardCopy from 'clipboard-copy';
 import React, { useRef } from 'react';
 import DessertIcon from '../images/Dessert.svg';

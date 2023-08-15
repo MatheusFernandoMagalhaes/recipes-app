@@ -1,16 +1,16 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
+
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import Context from '../Context/Context';
 import {
-  getDrinksAPI,
-  getDrinksCategoriesAPI,
-  getDrinksCategoriesFilter
+    getDrinksAPI,
+    getDrinksCategoriesAPI,
+    getDrinksCategoriesFilter
 } from '../Services/Drinks';
 import {
-  getMealsAPI,
-  getMealsCategoriesAPI,
-  getMealsCategoriesFilter
+    getMealsAPI,
+    getMealsCategoriesAPI,
+    getMealsCategoriesFilter
 } from '../Services/Meal';
 import '../Styles/FoodsOrDrinksCard.css';
 import '../Styles/Recipes.css';

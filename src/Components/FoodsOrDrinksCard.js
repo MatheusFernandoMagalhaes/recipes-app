@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
+
 import React, { useContext } from 'react';
 import Context from '../Context/Context';
 import DrinksIcon from '../images/drinks2.svg';

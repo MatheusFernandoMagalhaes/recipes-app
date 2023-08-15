@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-max-depth */
-/* eslint-disable jsx-a11y/control-has-associated-label */
+
 import clipboardCopy from 'clipboard-copy';
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';

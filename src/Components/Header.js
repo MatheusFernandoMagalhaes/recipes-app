@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
+
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Context from '../Context/Context';

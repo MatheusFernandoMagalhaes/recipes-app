@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
+
 import React, { useContext, useEffect, useState } from 'react';
 import Context from '../Context/Context';
 import '../Styles/Recipes.css';
